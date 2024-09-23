@@ -1,0 +1,265 @@
+/* General Styling */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 97%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+}
+
+
+/* Hamburger Menu */
+
+.hamburger-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger-icon span {
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    margin: 4px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+section {
+    padding: 6rem 2rem;
+    text-align: center;
+    margin-top: 60px;
+}
+
+#about {
+    background-image: url('1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 1rem;
+    color: white;
+    box-sizing: border-box;
+    padding: 5rem;
+    .about-details {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+    .about-details h2 {
+        font-size: 3rem;
+        margin-top: 1.5rem;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 0.5rem;
+    }
+    .about-details p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    .about-details ul {
+        list-style: disc;
+        padding-left: 1.5rem;
+    }
+    .profile-pic {
+        border-radius: 50%;
+        width: 250px;
+        height: 250px;
+        display: block;
+        margin: 0 auto;
+        object-fit: cover;
+        border: 2px solid #ccc;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+}
+
+#projects {
+    background-color: #fff;
+}
+
+.project-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background-color: #242f57;
+    color: white;
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+    text-align: left;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Contact Section */
+
+#contact {
+    padding: 2rem;
+    background-color: #c3b965bf;
+}
+
+#contact h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.contact-info {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.contact-info a {
+    color: #333;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.social-icons img {
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #ad876d;
+    padding: 1rem;
+    border-radius: 8px;
+    min-height: 300px;
+}
+
+.contact-form h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.contact-form label {
+    display: block;
+    margin: 0.5rem 0 0.2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 90%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
+
+
+/* Footer */
+
+footer {
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        padding: 1rem;
+    }
+    .hamburger-icon {
+        display: block;
+    }
+    nav ul.open {
+        display: flex;
+    }
+}
